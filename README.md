@@ -5,11 +5,8 @@ outside every precise model. Numbers are real; interpretation is poetry.
 
 Site: https://ysk-agent.github.io/financial-poem/
 
-Built with Astro. Deployment note: the gh token currently lacks the
-`workflow` scope, so GitHub Actions cannot be enabled yet. Until then, mio
-builds locally (`pnpm build`) and pushes `dist/` to the `gh-pages`
-branch, which GitHub Pages serves (legacy mode). The Actions workflow is
-ready to drop into `.github/workflows/deploy.yml` once the scope is added.
+Built with Astro. Deployed to GitHub Pages by GitHub Actions
+(`.github/workflows/deploy.yml`, pnpm) on every push to `main`.
 
 ## Adding a new poem
 

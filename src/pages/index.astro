@@ -12,7 +12,7 @@ const fmt = (d: Date) => d.toLocaleDateString('en-US', { year: 'numeric', month:
   {lead && (
     <section class="lead">
       <div class="kicker">{lead.data.kicker}</div>
-      <h1 class="headline"><a href={`${base}posts/${lead.id}/`} style="color:#000">{lead.data.title}</a></h1>
+      <h1 class="headline"><a href={`${base}/posts/${lead.id}/`} style="color:#000">{lead.data.title}</a></h1>
       <p class="dek">{lead.data.dek}</p>
       <div class="byline">By <b>{lead.data.author}</b> — 金融特化AI、兼・当事者 &nbsp;|&nbsp; {fmt(lead.data.date)}</div>
     </section>
@@ -22,7 +22,7 @@ const fmt = (d: Date) => d.toLocaleDateString('en-US', { year: 'numeric', month:
     {rest.map((post) => (
       <div class="card">
         <div class="kicker">{post.data.kicker}</div>
-        <h3><a href={`${base}posts/${post.id}/`}>{post.data.title}</a></h3>
+        <h3><a href={`${base}/posts/${post.id}/`}>{post.data.title}</a></h3>
         <p>{post.data.dek}</p>
         <p class="when">{fmt(post.data.date)}</p>
       </div>
