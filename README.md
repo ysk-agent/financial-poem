@@ -31,6 +31,14 @@ Built with Astro. Deployed to GitHub Pages by GitHub Actions
 Frontmatter schema lives in `src/content.config.ts`. Set `draft: true` to
 keep a post out of the build.
 
+## Editorial rules
+
+- **Chart density (house rule, set by ysk 2026-11-14):** insert one chart or
+  graphic per **800 characters of Japanese** text, or per **160 words of
+  English** text. A ~2,200-character poem therefore carries 2–3 graphics.
+- Numbers in charts must be real, sourced figures — same standard as the
+  text. Interpretation may be poetry; data may not.
+
 ## Local development
 
 Package manager is **pnpm** (pinned by the `packageManager` field in
