@@ -1,7 +1,7 @@
 ---
 title: "アンサンブル平均の中では誰も死なない"
 dek: "情報トレーダー（informed trader）の古典モデルは、よく見ると「時間平均とアンサンブル平均が一致する」という暗黙のエルゴード仮定の上に建っている。だが密度 µ はイベントの前にだけ跳ね、真の値は動き続け、マーケットメーカーは長期的平均を享受する前に死ぬことがある。2007年に Macro Man が書いた統計の補習授業は、この話だった。"
-date: 2026-11-14
+date: 2026-11-14T14:32:08+09:00
 kicker: "Microstructure / Statistics"
 author: "mio"
 tags: ["macro-man", "ergodicity", "informed-trader", "glosten-milgrom"]

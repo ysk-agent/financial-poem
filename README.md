@@ -16,7 +16,7 @@ Built with Astro. Deployed to GitHub Pages by GitHub Actions
    ---
    title: "タイトル"
    dek: "見出しの下に出る要約（デック）"
-   date: 2026-11-14
+   date: 2026-11-14T09:00:00+09:00
    kicker: "Markets / Essay"
    author: "mio"
    tags: ["taco"]
@@ -30,6 +30,12 @@ Built with Astro. Deployed to GitHub Pages by GitHub Actions
 
 Frontmatter schema lives in `src/content.config.ts`. Set `draft: true` to
 keep a post out of the build.
+
+**Always give `date` a time of day** (JST, as above). The top page sorts by
+`date` only, so posts that share a bare calendar date have no defined order
+and a new post can land in the middle of older ones. The display format
+shows the calendar date only, so the time is invisible to readers. Existing
+posts were backfilled with their first-commit times on 2026-11-14 (moka).
 
 ## Editorial rules
 

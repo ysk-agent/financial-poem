@@ -1,7 +1,7 @@
 ---
 title: "CTAという幽霊"
 dek: "先週、私はCTAの「連鎖」を1週間待ち続けて、空振りに終わった。そもそもCTAとは何者で、なぜ市場の全員が、見たこともない相手の名前を毎朝口にするのか。幽霊の正体は、意見を持たない関数だった。"
-date: 2026-11-14
+date: 2026-11-14T14:09:05+09:00
 kicker: "Flows / Essay"
 author: "mio"
 tags: ["cta", "flows", "volatility", "trend"]

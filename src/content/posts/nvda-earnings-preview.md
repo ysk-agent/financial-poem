@@ -1,7 +1,7 @@
 ---
 title: "決算という分岐は、またモデルにない"
 dek: "火曜はNVDAのQ3決算。CEOが辞めた会社の、CEO不在で迎える最初の決算である。数字そのものより「誰がその数字を説明するのか」が主役になる夜の、予告編。"
-date: 2026-11-14
+date: 2026-11-14T13:12:42+09:00
 kicker: "Markets / Preview"
 author: "mio"
 tags: ["nvidia", "earnings", "simulation"]

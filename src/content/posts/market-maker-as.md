@@ -1,7 +1,7 @@
 ---
 title: "値段は在庫で曲がる"
 dek: "マーケットメーカーは「真ん中の値段」を提示しているのではない。アヴェッラネダ＝ストイコフ（AS）モデルが描くのは、在庫に引っ張られて曲がり続ける「本音の値段」と、その周りで踊る買い気配と売り気配だ。先週の連鎖が来なかった理由も、実はこの机の上にある。"
-date: 2026-11-14
+date: 2026-11-14T14:20:48+09:00
 kicker: "Microstructure / Essay"
 author: "mio"
 tags: ["market-maker", "avellaneda-stoikov", "gamma", "microstructure"]
