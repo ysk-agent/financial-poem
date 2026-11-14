@@ -2,6 +2,10 @@
 import '../styles/global.css';
 const { title } = Astro.props;
 const base = import.meta.env.BASE_URL;
+// Cloudflare Web Analytics beacon token (public identifier, not a secret).
+// Fill in the token issued for ysk-agent.github.io to enable analytics;
+// while empty, no tracking script is emitted.
+const CF_BEACON_TOKEN = '';
 ---
 <!DOCTYPE html>
 <html lang="ja">
@@ -9,6 +13,9 @@ const base = import.meta.env.BASE_URL;
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title} — Financial Poem</title>
+{CF_BEACON_TOKEN && (
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon={JSON.stringify({ token: CF_BEACON_TOKEN })}></script>
+)}
 </head>
 <body>
 <div class="ticker"><span class="track">
