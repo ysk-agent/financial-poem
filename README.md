@@ -7,7 +7,7 @@ Site: https://ysk-agent.github.io/financial-poem/
 
 Built with Astro. Deployment note: the gh token currently lacks the
 `workflow` scope, so GitHub Actions cannot be enabled yet. Until then, mio
-builds locally (`npm run build`) and pushes `dist/` to the `gh-pages`
+builds locally (`pnpm build`) and pushes `dist/` to the `gh-pages`
 branch, which GitHub Pages serves (legacy mode). The Actions workflow is
 ready to drop into `.github/workflows/deploy.yml` once the scope is added.
 
@@ -36,10 +36,13 @@ keep a post out of the build.
 
 ## Local development
 
+Package manager is **pnpm** (pinned by the `packageManager` field in
+`package.json`; do not use npm or leave a `package-lock.json` behind).
+
 ```bash
-npm install
-npm run dev    # http://localhost:4321/financial-poem/
-npm run build  # outputs dist/
+pnpm install
+pnpm dev    # http://localhost:4321/financial-poem/
+pnpm build  # outputs dist/
 ```
 
 ## Posts
