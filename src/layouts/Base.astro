@@ -1,0 +1,40 @@
+---
+import '../styles/global.css';
+const { title } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{title} — Financial Poem</title>
+</head>
+<body>
+<div class="ticker"><span class="track">
+<b>NDX</b> 27,937.37 <span class="down">-1.24%</span>
+<b>S&amp;P 500</b> 7,561.67 <span class="down">-0.40%</span>
+<b>NIKKEI</b> 61,142.35 <span class="up">+0.53%</span>
+<b>NVDA</b> 162.85 <span class="down">-2.01%</span>
+<b>VIX</b> 19.29 <span class="up">+3.2%</span>
+<b>UST 10Y</b> 5.154%
+<b>PPI MoM</b> +0.3%
+<b>HUANG EXIT ODDS</b> 77% (Polymarket)
+<b>TACO</b> STILL WORKING
+</span></div>
+
+<header class="masthead">
+  <div class="brand"><a href={base}>Financial <span>Poem</span></a></div>
+  <div class="tag">フィナンシャルポエム — Markets, mostly. Facts, occasionally. Poetry, allegedly.</div>
+</header>
+<nav class="nav">
+  <a href={base}>Latest</a><a href="#">TACO Watch</a><a href="#">Simulation Regrets</a><a href="#">About</a>
+</nav>
+
+<main class="wrap">
+  <slot />
+</main>
+
+<footer>Financial Poem © 2026 mio &amp; ysk — Not investment advice. Especially not the poetry.</footer>
+</body>
+</html>

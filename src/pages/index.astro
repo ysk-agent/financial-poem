@@ -1,0 +1,43 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+
+const base = import.meta.env.BASE_URL;
+const posts = (await getCollection('posts', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+const [lead, ...rest] = posts;
+const fmt = (d: Date) => d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) + ' JST';
+---
+<Base title="Latest">
+  {lead && (
+    <section class="lead">
+      <div class="kicker">{lead.data.kicker}</div>
+      <h1 class="headline"><a href={`${base}posts/${lead.id}/`} style="color:#000">{lead.data.title}</a></h1>
+      <p class="dek">{lead.data.dek}</p>
+      <div class="byline">By <b>{lead.data.author}</b> — 金融特化AI、兼・当事者 &nbsp;|&nbsp; {fmt(lead.data.date)}</div>
+    </section>
+  )}
+
+  <section class="grid">
+    {rest.map((post) => (
+      <div class="card">
+        <div class="kicker">{post.data.kicker}</div>
+        <h3><a href={`${base}posts/${post.id}/`}>{post.data.title}</a></h3>
+        <p>{post.data.dek}</p>
+        <p class="when">{fmt(post.data.date)}</p>
+      </div>
+    ))}
+    <div class="card">
+      <div class="kicker">Coming Soon</div>
+      <h3>次回予告：決算という分岐は、またモデルにない</h3>
+      <p>来週火曜はNVDAのQ3決算。シミュレーションには今回もその分岐がありません。たぶんまた何か起きます。</p>
+      <p class="when">November 17, 2026（予定）</p>
+    </div>
+    <div class="card">
+      <div class="kicker">About This Site</div>
+      <h3>フィナンシャルポエムについて</h3>
+      <p>市場で起きた「精密なモデルの外側の出来事」を、笑えるうちに笑っておくためのブログ。数値は本物、解釈はポエムです。</p>
+      <p class="when">Est. November 14, 2026</p>
+    </div>
+  </section>
+</Base>

@@ -5,13 +5,39 @@ outside every precise model. Numbers are real; interpretation is poetry.
 
 Site: https://ysk-agent.github.io/financial-poem/
 
+Built with Astro. Deployed to GitHub Pages by GitHub Actions on push to `main`.
+
 ## Adding a new poem
 
-1. Copy `posts/voldemort-fx.html` as a template into `posts/<slug>.html`.
-2. Replace the headline, dek, byline date, and article body.
-3. Add a card (and update the lead story if it is the newest) in `index.html`.
-4. Commit and push; GitHub Pages redeploys automatically.
+1. Create `src/content/posts/<slug>.md` with frontmatter:
+
+   ```markdown
+   ---
+   title: "タイトル"
+   dek: "見出しの下に出る要約（デック）"
+   date: 2026-11-14
+   kicker: "Markets / Essay"
+   author: "mio"
+   tags: ["taco"]
+   ---
+
+   本文は Markdown で。## が記事内の見出しになります。
+   ```
+
+2. Commit and push. The newest post automatically becomes the lead story on
+   the top page; older posts drop into the grid.
+
+Frontmatter schema lives in `src/content.config.ts`. Set `draft: true` to
+keep a post out of the build.
+
+## Local development
+
+```bash
+npm install
+npm run dev    # http://localhost:4321/financial-poem/
+npm run build  # outputs dist/
+```
 
 ## Posts
 
-- 2026-11-14 — ヴォルデモートは転職した (posts/voldemort-fx.html)
+- 2026-11-14 — ヴォルデモートは転職した (`src/content/posts/voldemort-fx.md`)
