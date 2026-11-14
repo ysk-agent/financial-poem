@@ -2,10 +2,9 @@
 import '../styles/global.css';
 const { title } = Astro.props;
 const base = import.meta.env.BASE_URL;
-// Cloudflare Web Analytics beacon token (public identifier, not a secret).
-// Fill in the token issued for ysk-agent.github.io to enable analytics;
-// while empty, no tracking script is emitted.
-const CF_BEACON_TOKEN = '';
+// Cloudflare Web Analytics beacon token (public identifier, not a secret),
+// issued for ysk-agent.github.io. While empty, no tracking script is emitted.
+const CF_BEACON_TOKEN = '20d8593ed557487e8886b9e121b6cf0d';
 ---
 <!DOCTYPE html>
 <html lang="ja">
@@ -14,7 +13,7 @@ const CF_BEACON_TOKEN = '';
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title} — Financial Poem</title>
 {CF_BEACON_TOKEN && (
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon={JSON.stringify({ token: CF_BEACON_TOKEN })}></script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon={JSON.stringify({ token: CF_BEACON_TOKEN })}></script>
 )}
 </head>
 <body>
