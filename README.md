@@ -39,6 +39,9 @@ keep a post out of the build.
   count prose only, excluding figure markup and captions.
 - Numbers in charts must be real, sourced figures — same standard as the
   text. Interpretation may be poetry; data may not.
+- Chart SVGs must be valid XML. Escape `&` in labels (`M&A` → `M&amp;A`):
+  an invalid SVG is still served with HTTP 200, but browsers refuse to
+  render it. Run `sh scripts/check-svg.sh` before publishing.
 
 ## Local development
 
