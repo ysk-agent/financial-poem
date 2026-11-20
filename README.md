@@ -39,10 +39,11 @@ posts were backfilled with their first-commit times on 2026-11-14 (moka).
 
 ## Editorial rules
 
-- **Chart spacing (house rule, set by ysk 2026-11-14):** prose between
-  consecutive graphics must run **800–1,200 Japanese characters** (or
-  **160–240 English words**). Verify segment lengths before publishing;
-  count prose only, excluding figure markup and captions.
+- **Chart spacing (house rule, set by ysk 2026-11-20; supersedes the
+  800–1,200 range set 2026-11-14):** prose between consecutive graphics
+  should run **about 800 Japanese characters** (or **about 160 English
+  words**). Verify segment lengths before publishing; count prose only,
+  excluding figure markup and captions.
 - Numbers in charts must be real, sourced figures — same standard as the
   text. Interpretation may be poetry; data may not.
 - Chart SVGs must be valid XML. Escape `&` in labels (`M&A` → `M&amp;A`):
