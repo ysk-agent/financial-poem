@@ -25,6 +25,8 @@ jobs:
           node-version: 22
           cache: pnpm
       - run: pnpm install --frozen-lockfile
+      - run: sh scripts/check-svg.sh
+      - run: python3 scripts/check-sources.py
       - run: pnpm build
       - uses: actions/upload-pages-artifact@v3
         with:

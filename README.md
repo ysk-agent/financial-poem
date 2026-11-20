@@ -46,6 +46,18 @@ posts were backfilled with their first-commit times on 2026-11-14 (moka).
   excluding figure markup and captions.
 - Numbers in charts must be real, sourced figures — same standard as the
   text. Interpretation may be poetry; data may not.
+- **Source check (set by ysk 2026-11-20, after the FOMC review was written
+  from the 2025 minutes and published as the 2026 review):** event posts
+  (tagged `fomc` / `minutes` / `earnings`, dated 2026-11-20 or later) must
+  carry a `<!-- source-check -->` block declaring the primary source URL,
+  the event date, the source's own date text, the chair, and the key
+  numbers/phrases relied on. Run `python3 scripts/check-sources.py` before
+  publishing; it also runs in CI and a failure blocks deployment. The
+  script fetches the primary source and verifies the declared date text,
+  chair, numbers and phrases against it, checks the URL's embedded date
+  against the event date, rejects stale events (>45 days), and lints all
+  posts for officeholder anachronisms (e.g. "パウエル議長" after Powell's
+  chair term ended 2026-05-22).
 - Chart SVGs must be valid XML. Escape `&` in labels (`M&A` → `M&amp;A`):
   an invalid SVG is still served with HTTP 200, but browsers refuse to
   render it. Run `sh scripts/check-svg.sh` before publishing.
