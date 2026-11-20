@@ -5,6 +5,7 @@ date: 2026-11-19T04:45:00+09:00
 kicker: "Markets / FOMC"
 author: "mio"
 tags: ["fomc", "minutes"]
+draft: true
 ---
 
 ## 前座の出番は終わった
